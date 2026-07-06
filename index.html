@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Khushi Apu 🎂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating background decorations -->
+    <div class="bg-decorations" id="bgDecorations"></div>
+
+    <!-- Confetti container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Floating texts container -->
+    <div class="floating-texts" id="floatingTexts"></div>
+
+    <!-- =================== SCREEN 1 : Welcome =================== -->
+    <section id="screen1" class="screen active">
+        <div class="screen-content">
+            <div class="sparkle">✨</div>
+            <h1 class="title-big">
+                <span class="line1">Happy Birthday</span>
+                <span class="line2">Khushi Apu</span>
+            </h1>
+            <div class="cake-emoji">🎂</div>
+            <p class="text-small">
+                আজকের দিনে জন্ম নিছো বাহ বাহ বুইরা হয়ে যাচ্ছো দিনকে দিন 🌸<br>
+                জানি না আমাকে মনে রাখছো কি না যদি রাখো তো ভালো আর না হলে<br>
+                রাগ করবো কিন্তু 😤💕
+            </p>
+            <button class="next-btn" onclick="goToScreen(2)">
+                <span>Next</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =================== SCREEN 2 : Cake & Counter =================== -->
+    <section id="screen2" class="screen">
+        <div class="screen-content">
+            <div class="top-row">
+                <h2 class="title-apu">happy birthday<br>apuuuuuuuu 💕</h2>
+                <div class="counter-box">
+                    <label class="counter-label">কতবার বলবো?</label>
+                    <input type="number" id="countInput" min="1" max="100" placeholder="সংখ্যা" value="5">
+                    <button class="counter-btn" onclick="generateTexts()">বলো! 🎉</button>
+                </div>
+            </div>
+
+            <div class="cake-area">
+                <div class="cake-wrapper" id="cakeWrapper" onclick="serveCake()">
+                    <div class="candles">
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                        <div class="candle"><div class="flame"></div></div>
+                    </div>
+                    <div class="cake">
+                        <div class="cake-layer top"></div>
+                        <div class="cake-layer middle"></div>
+                        <div class="cake-layer bottom"></div>
+                        <div class="cherry">🍒</div>
+                    </div>
+                    <p class="cake-hint">👆 কেকে ক্লিক করো</p>
+                </div>
+
+                <!-- Flying cake slice -->
+                <div class="cake-slice" id="cakeSlice">🍰</div>
+
+                <p class="cake-message" id="cakeMessage"></p>
+            </div>
+
+            <button class="next-btn" onclick="goToScreen(3)">
+                <span>Next</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =================== SCREEN 3 : Emotional Message =================== -->
+    <section id="screen3" class="screen">
+        <div class="screen-content">
+            <div class="message-card">
+                <div class="card-header">
+                    <span class="heart">💖</span>
+                    <span class="card-title">আপুর জন্য...</span>
+                    <span class="heart">💖</span>
+                </div>
+                <div class="message-body">
+                    <p>আপু তুমি হইতো ফেসবুক ছেরেদিছো 🥺</p>
+                    <p>জানি না তুমি আমার এই সাইটটাও পাইছো কি না</p>
+                    <p>জানি না কিন্তু আপু সত্তি তুমি না থাকলে তোমাকে অনেক বেশি মিস করবো 💔</p>
+                    <p>হ্যা আপু আমি তোমাকে মিস করছি 😢</p>
+                    <p>আর সব সময় তোমাকে মনে রাখবো কখনও ভুলে যাবো না 🌹</p>
+                    <p>কারণ তোমাকে আমি নিজের বড় আপু মানি 💕</p>
+                    <p>আর সব সময় মানবো 👑</p>
+                    <p class="dialogue">আপু তুমি আমাকে বলেছিলে না যে —<br>"মন থেকে বলতে সে আসবে কি না"</p>
+                    <p class="note">আমি অধ্যেক এ জন্য বলছিলাম যাতে তুমি একটু শান্তি পেতে পারো 🕊️<br>কারণ আপু আমি দেখছি তুমি কতটা কষ্ট পাইছিলে 😔</p>
+                </div>
+            </div>
+            <button class="next-btn" onclick="goToScreen(4)">
+                <span>Next</span>
+                <span class="btn-arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- =================== SCREEN 4 : Chocolate =================== -->
+    <section id="screen4" class="screen">
+        <div class="screen-content">
+            <div class="chocolate-scene">
+                <div class="chocolate-wrapper">
+                    <div class="chocolate" id="chocolate">🍫</div>
+                    <div class="sparkle-choco">✨</div>
+                </div>
+                <h2 class="chocolate-text">এএএএএ পিচ্চি চকলেট খাবি 🍫😋</h2>
+                <p class="final-message">শুভ জন্মদিন আপু 🎂💖</p>
+                <button class="restart-btn" onclick="goToScreen(1)">আবার দেখো 🔁</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
